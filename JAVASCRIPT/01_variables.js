@@ -1,3 +1,5 @@
+// JavaScript
+
 const accountId=100;
 let accountEmail="example@gmail.com";
 var accountPassword="1234";
