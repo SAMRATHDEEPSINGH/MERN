@@ -82,5 +82,87 @@ if(true){
     const a=50;
     let b=30;
     var c=56;
+    var d=99;
 }
+// var c=55;
 console.log(a,b,c);
+
+function one(){
+    const username="Raesh";
+
+    function two(){
+        const website="Facebook"
+        console.log(username);
+    }
+    // console.log(website);                cannot be executed
+    two();
+}
+
+one();
+
+
+console.log(addone(50));              //Do not gves an Error
+function addone(num){
+    return num+1;
+
+}
+
+// addTwo(50);                      //Gives Error if stored using a variable
+const addTwo=function(num){
+    return num + 2;
+
+}
+
+const user={
+    username:"hitesh",
+    price:999,
+    welcomeMessage:function(){
+        console.log(`${this.username},welcome to website`);
+        console.log(this);
+    }
+}
+
+user.welcomeMessage();
+user.username="sam";
+user.welcomeMessage();
+console.log(this)                   //Refereces to empty object.
+
+function freetip(){
+    let username="sam";
+    console.log(this)
+    console.log(this.username)
+}
+
+freetip();              //undefined because this only works in case of object here ..
+
+// How to declare function using arrow function
+
+const code=()=>{
+    let username="Sam";
+    console.log(this.username)
+}
+
+const addTwoex=(num1,num2)=>{                           //Explicit return 
+    return num1+num2;
+}
+console.log(addTwoex(1,2));
+
+// const addTwoex1=(num1,num2)=> num1+num2                 //Implcit return 
+// const addTwoex1=(num1,num2)=> (num1+num2)                 //Implcit return with round parentheses
+
+const addTwoex1=(num1,num2)=> ({username:"Sam"})                 //if want to return object
+console.log(addTwoex1(1,2));
+
+
+// Immediately Invoked Function Expression (IIFE)
+// Avoid polluting the global namespace
+// Because our application could include many functions and global variables from different source files, it's important to limit the number of global variables. If we have some initiation code that we don't need to use again, we could use the IIFE pattern. As we will not reuse the code again, using IIFE in this case is better than using a function declaration or a function expression.
+
+(function example2() {
+    console.log(`example`);
+})();
+
+((name)=>{
+    console.log(`${name} HelloWorld`)
+})('Sam');
+
