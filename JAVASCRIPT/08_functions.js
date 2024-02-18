@@ -101,7 +101,7 @@ function one(){
 one();
 
 
-console.log(addone(50));              //Do not gives an Error
+console.log(addone(50));              //Do not gves an Error
 function addone(num){
     return num+1;
 
