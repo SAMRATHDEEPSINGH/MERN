@@ -166,3 +166,16 @@ console.log(addTwoex1(1,2));
     console.log(`${name} HelloWorld`)
 })('Sam');
 
+// // Javascript closure
+// function outer(){
+//     let outerv="outer";
+//     function inner(){
+//         console.log(outerv);
+//     }
+//     return inner;
+// }
+
+// const closureex=outer();
+
+// console.log(closureex())
+
