@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>More about Async</h1>
+    <button id="start">start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // const saySam=function(){
+    //     console.log("Sam")
+    // }
+
+    // const changeText=function(){
+    //     document.querySelector('h1').innerHTML='Welcome'
+
+    // }
+    // const changeMe=setTimeout(changeText,2000)
+
+    // document.querySelector('#stop').addEventListener('click',function(){
+    //     clearTimeout(changeMe)
+    //     console.log("Done")
+    // })
+    // clearTimeout(changeMe)
+
+    const sayDate=function(str){
+        console.log(str,Date.now())
+
+    }
+    
+    let intset;
+    
+    document.querySelector('#start').addEventListener('click',function(){
+        intset=setInterval(sayDate,1000,"Hello")
+    }) 
+
+   document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(intset);
+        console.log("Stoped");
+   })
+
+</script>
+</html>
