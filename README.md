@@ -93,6 +93,3 @@ I plan to continue building more complex projects and delve deeper into advanced
 
 Contributing
 I welcome contributions from the community! If you have any ideas for improvements or new features, feel free to fork the repository and submit a pull request.
-
-License
-This project is licensed under the MIT License. See the LICENSE file for more details.
